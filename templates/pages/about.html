@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About us{% endblock title %}
+
+{% block content %}
+<div class="container mt-4 center">
+  <h1>About us</h1>
+  <p>Welcome to TaskFlow, your ultimate solution for seamless project management and efficient issue tracking. Founded
+    on the principle of simplifying workflow processes, TaskFlow aims to empower teams of all sizes to achieve their
+    goals with ease and precision.</p>
+  <p><img src="{% static 'img/software-company.jpg' %}" alt="Software company"></p>
+  <div class="left">
+    <h2>Our Mission</h2>
+    <p>At TaskFlow, our mission is to provide a user-friendly and powerful platform that transforms the way teams
+      collaborate and manage their tasks. We believe that by streamlining project management, we can help businesses
+      focus
+      on what they do best—innovate and grow.</p>
+    <h2>Our Story</h2>
+    <p>TaskFlow was born out of a need for a more intuitive and flexible project management tool. Frustrated with
+      existing
+      solutions that were either too complex or too simplistic, our founders set out to create a system that strikes the
+      perfect balance. With a deep understanding of the challenges faced by teams across various industries, we
+      developed
+      TaskFlow to be adaptable, robust, and user-centric.</p>
+    <h2>Our Values</h2>
+    <ol>
+      <li><b>Simplicity:</b> We prioritize a clean, intuitive design that makes task management straightforward and
+        enjoyable.
+      </li>
+      <li><b>Collaboration:</b> We believe in the power of teamwork and have built features that foster communication
+        and
+        cooperation.</li>
+      <li><b>Innovation:</b> We are constantly evolving, adding new features, and integrating the latest technologies to
+        meet the changing needs of our users.</li>
+      <li><b>Customer-Centric:</b> Your feedback drives our development. We are committed to providing exceptional
+        support
+        and continuously improving based on your needs.</li>
+    </ol>
+    <h2>Our Team</h2>
+    <p>Our team is a diverse group of passionate professionals dedicated to making TaskFlow the best project management
+      tool on the market. With backgrounds in software development, design, customer support, and project management, we
+      bring a wealth of experience and creativity to everything we do.</p>
+    <h2>Join Us on Our Journey</h2>
+    <p>We invite you to join us on our journey to redefine project management. Whether you're a small startup or a large
+      enterprise, TaskFlow is here to help you stay organized, meet deadlines, and achieve your project goals. Together,
+      let's make managing projects a breeze.</p>
+    <p>Thank you for choosing TaskFlow. Let's get things done, better and faster!</p>
+  </div>
+</div>
+{% endblock content %}

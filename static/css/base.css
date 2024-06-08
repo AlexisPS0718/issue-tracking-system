@@ -1,0 +1,170 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  font-family: "Varela Round", sans-serif;
+  background-color: #FEEFAD;
+} */
+
+/* i {
+  color: #27374D;
+} */
+
+label {
+  display: block;
+}
+
+/* table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+} */
+
+/* input,
+textarea {
+  width: 20rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid #27374D;
+  border-radius: 5px;
+  padding: 0.5rem;
+  resize: none;
+} */
+
+/* textarea {
+  height: 10rem;
+} */
+
+/* .form-container {
+  border: 1px solid black;
+  width: min-content;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+} */
+
+/* .navbar-custom {
+  background-color: #FDDE55 !important;
+} */
+
+/* .txt-white {
+  color: white !important;
+} */
+
+.nav-title {
+  font-size: 2rem;
+}
+
+/* .w-medium {
+  font-weight: 500;
+} */
+
+.secondary-text {
+  font-size: 1.2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.btn-custom {
+  background-color: rgb(248, 249, 250);
+  /* border: 1px solid black;
+  color: black; */
+}
+
+/* .btn-custom:hover {
+  background-color: #e1c54c;
+  border: 1px solid black;
+  color: black;
+} */
+
+/* .full-w-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position-y: -27rem;
+  width: 100vw;
+  height: 25vh;
+  color: white;
+} */
+
+/* .outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+} */
+
+/* .br-5 {
+  border-radius: 5px;
+} */
+
+/* .block {
+  display: block;
+  margin-bottom: 0.3rem;
+} */
+
+/* .m-auto {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+} */
+
+/* .flex-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+} */
+
+/* .wth-30 {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .wth-20 {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .task-detail {
+  border: 1px solid #27374D;
+  border-radius: 10px;
+  padding: 1rem 2rem 1rem 2rem;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+} */
+
+/* .delete-form {
+  display: inline;
+} */
+
+/* .cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .no-underline {
+  text-decoration: none;
+} */
+
+/* .custom-input {
+  width: min-content;
+  margin: 0;
+} */

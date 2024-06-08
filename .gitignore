@@ -1,0 +1,7 @@
+*venv*
+*__pycache__*
+/notes.txt
+mini-challenges/*
+.env
+staticfiles
+TODO.md
