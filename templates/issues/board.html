@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Board{% endblock title %}
+
+{% block content %}
+<div class="container mt-4 mb-5">
+  <h1 class="center mb-3">Board</h1>
+  <div class="flex">
+    <div class="wd-20 bg-gray rounded pd-1">
+      <h4>To do</h4>
+      {% for issue in to_do_list %}
+      {% if issue.reporter.team == user.team %}
+      <div class="card mb-3 pd-1">
+        <a href="{% url 'detail' issue.id  %}">
+          <h4>{{ issue.name }}</h4>
+        </a>
+        <p>{{ issue.summary }}</p>
+        <p>{{ issue.description }}</p>
+        <small>Team: {{ issue.reporter.team }}</small>
+        <small>Reporter: {{ issue.reporter }}</small>
+        <a href="{% url 'edit' issue.id  %}" class="mt-2">Edit</a>
+        {% if user.role.name == "Developer" %}
+        <form method="POST" action="{% url 'update_status' issue.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="status" id="id_status" value="2">
+          <input type="submit" class="nav-link link" value="Update">
+        </form>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="wd-20 bg-gray rounded pd-1">
+      <h4>In progress</h4>
+      {% for issue in in_progress_list %}
+      {% if issue.reporter.team == user.team %}
+      <div class="card mb-3 pd-1">
+        <a href="{% url 'detail' issue.id  %}">
+          <h4>{{ issue.name }}</h4>
+        </a>
+        <p>{{ issue.summary }}</p>
+        <p>{{ issue.description }}</p>
+        <small>Team: {{ issue.reporter.team }}</small>
+        <small>Reporter: {{ issue.reporter }}</small>
+        <a href="{% url 'edit' issue.id  %}" class="mt-2">Edit</a>
+        {% if user.role.name == "Developer" %}
+        <form method="POST" action="{% url 'update_status' issue.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="status" id="id_status" value="3">
+          <input type="submit" class="nav-link link" value="Update">
+        </form>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="wd-20 bg-gray rounded pd-1">
+      <h4>Done</h4>
+      {% for issue in done_list %}
+      {% if issue.reporter.team == user.team %}
+      <div class="card mb-3 pd-1">
+        <a href="{% url 'detail' issue.id  %}">
+          <h4>{{ issue.name }}</h4>
+        </a>
+        <p>{{ issue.summary }}</p>
+        <p>{{ issue.description }}</p>
+        <small>Team: {{ issue.reporter.team }}</small>
+        <small>Reporter: {{ issue.reporter }}</small>
+        <a href="{% url 'edit' issue.id  %}" class="mt-2">Edit</a>
+        {% if user.role.name == "Scrum Master" %}
+        <form method="POST" action="{% url 'update_status' issue.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="status" id="id_status" value="1">
+          <input type="submit" class="nav-link link" value="Reset">
+        </form>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}

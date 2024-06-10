@@ -1,15 +1,25 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ issue.summary }}{% endblock title %}
+{% block title %}{{ issue.name }}{% endblock title %}
 
 {% block content %}
 <div class="container mt-4">
-  <h1 class="center mb-3">Issue details</h1>
-  <div class="card">
-    <div>
-      <h2>{{ issue.summary }}</h2>
-      <p>TODO</p>
-    </div>
+  <h1 class="center mb-3">{{ issue.name }}</h1>
+  <div class="card wd-50 pd-1">
+    <h4>Summary</h4>
+    <p>{{ issue.summary }}</p>
+    <h4>Description</h4>
+    <p>{{ issue.description }}</p>
+    <h4>Status</h4>
+    <p>{{ issue.status }}</p>
+    <small>Reporter: {{ issue.reporter }}</small>
+    <small>Assignee: {{ issue.assignee }}</small>
+    <br>
+    <small>Complexity: {{ issue.complexity }}</small>
+    <small>Priority: {{ issue.priority }}</small>
+    <br>
+    <small>Created on: {{ issue.created_on }}</small>
+    <small>Updated on: {{ issue.updated_on }}</small>
   </div>
 </div>
 {% endblock content %}

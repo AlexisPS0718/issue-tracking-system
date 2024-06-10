@@ -4,11 +4,20 @@
 
 {% block content %}
 <div class="container mt-5 center">
-  <h1>Welcome to TaskFlow</h1>
+  <h1>Welcome to Task<b>Flow</b></h1>
   <p><b>TaskFlow</b> is an intuitive issue tracking system that streamlines project management. It uses a
     card-based interface to organize tasks, allowing teams to easily track progress, assign responsibilities, and
-    collaborate efficiently. With real-time updates, customizable workflows, and integration capabilities,
-    <b>TaskFlow</b> ensures seamless coordination and enhanced productivity.
+    collaborate efficiently. With real-time updates, customizable workflows, and integration capabilities.
   </p>
+  {% if user.is_authenticated %}
+  <h3>
+    <p>Hello, <b>{{ user.username }}</b>!</p>
+  </h3>
+  <p>Your role is {{ user.role.name }}</p>
+  <p>You're on team {{ user.team.name }}</p>
+  {% else %}
+  <h3>Get started now with <b>TaskFlow</b></h3>
+  <p><a class="btn btn-custom" href="{% url 'signup' %}">Sign Up</a></p>
+  {% endif %}
 </div>
 {% endblock content %}

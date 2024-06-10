@@ -4,7 +4,7 @@
 {% block title %}Log In{% endblock title %}
 
 {% block content %}
-<div class="container center mt-4">
+<div class="container-custom mt-4 mb-5">
   <h1>Log In</h1>
   <div>
     <form method="POST">
@@ -12,8 +12,9 @@
       {{ form|crispy }}
       <input type="submit" class="btn btn-custom w-100" value="Log In">
     </form>
+    <br>
     <small>Did you forget your password?
-      <a href="{% url 'password_reset' %}">Click here</a> to reset it.
+      <a href="{% url 'password_reset' %}" class="link">Click here</a> to reset it.
     </small>
   </div>
 </div>
